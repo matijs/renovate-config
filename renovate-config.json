@@ -1,0 +1,10 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Used for 'configurationFile' in `.github/workflows/renovate.yml`",
+  "extends": ["config:base"],
+  "platform": "github",
+  "repositories": [
+    "matijs/renovate-config",
+    "matijs/til"
+  ]
+}
