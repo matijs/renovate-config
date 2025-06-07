@@ -2,15 +2,32 @@ name: Renovate
 
 on:
   workflow_dispatch:
+    inputs:
+      log-level:
+        description: Log level
+        required: true
+        default: INFO
+        type: choice
+        options:
+          - TRACE
+          - DEBUG
+          - INFO
+          - WARN
+          - ERROR
   schedule:
     # run at 02:02 every Friday, the asterisk has special meaning in YAML so this must be quoted
     - cron: '2 2 * * 5'
+
+concurrency:
+  group: renovate
 
 permissions: {}
 
 jobs:
   renovate:
     runs-on: ubuntu-latest
+    env:
+      LOG_LEVEL: ${{ github.event.inputs.log-level || 'INFO' }}
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       - uses: actions/create-github-app-token@df432ceedc7162793a195dd1713ff69aefc7379e # 2.0.6
