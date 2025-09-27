@@ -5,6 +5,7 @@
   "platform": "github",
   "repositories": [
     "matijs/renovate-config",
-    "matijs/til"
+    "matijs/til",
+    "matijs/probablerobot.net"
   ]
 }
