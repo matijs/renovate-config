@@ -36,7 +36,7 @@ jobs:
           app-id: ${{ vars.APP_ID }}
           private-key: ${{ secrets.PRIVATE_KEY }}
           owner: ${{ github.repository_owner }}
-      - uses: renovatebot/github-action@aec779d4f7845f8431ddf403cf9659d4702ddde0 # v43.0.18
+      - uses: renovatebot/github-action@a3c115cd6676c8a5bc72f9715f108759e570daf5 # v43.0.19
         with:
           # recommended to not name it one of the repository configuration filenames listed in the Renovate Docs
           configurationFile: renovate-config.json
