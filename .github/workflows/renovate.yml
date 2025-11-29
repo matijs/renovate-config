@@ -1,6 +1,12 @@
 name: Renovate
 
 on:
+  # Immediately run again after renovate.yml itself was updated
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/renovate.yml
   workflow_dispatch:
     inputs:
       log-level:
@@ -20,6 +26,7 @@ on:
 
 concurrency:
   group: renovate
+  cancel-in-progress: true
 
 permissions: {}
 
