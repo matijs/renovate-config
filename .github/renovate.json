@@ -1,5 +1,5 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "description": "This configuration enables renovate for this repository",
-  "minimumReleaseAge": "3 days"
+  "extends": ["github>matijs/renovate-config"]
 }
