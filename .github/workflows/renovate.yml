@@ -21,8 +21,8 @@ on:
           - WARN
           - ERROR
   schedule:
-    # run at 02:02 every Friday, the asterisk has special meaning in YAML so this must be quoted
-    - cron: '2 2 * * 5'
+    # run at 07:02 UTC every Monday.
+    - cron: '7 2 * * 1'
 
 concurrency:
   group: renovate
