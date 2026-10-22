@@ -46,7 +46,7 @@ jobs:
           owner: ${{ github.repository_owner }}
           permission-administration: read
           permission-checks: write
-          permission-commit-statuses: write
+          permission-statuses: write
           permission-contents: write
           permission-dependabot-alerts: write
           permission-issues: write
