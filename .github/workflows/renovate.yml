@@ -21,8 +21,8 @@ on:
           - WARN
           - ERROR
   schedule:
-    # run at 07:02 UTC every Monday.
-    - cron: '7 2 * * 1'
+    # run at 05:45 UTC every Saturday.
+    - cron: '5 45 * * 6'
 
 concurrency:
   group: renovate
